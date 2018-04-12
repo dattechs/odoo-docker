@@ -1,0 +1,19 @@
+# odoo-docker
+
+version: '2'
+services:
+  odoo:
+    image: odoo:11
+    restart: always
+    ports:
+      - "8070:8069"
+    links:
+      - db
+    volumes:
+      - ./extra-addons:/mnt/extra-addons
+  db:
+    image: postgres:9.4
+    restart: always
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
