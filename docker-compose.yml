@@ -3,7 +3,7 @@
 version: '2'
 services:
   odoo:
-    image: odoo
+    image: ./odoo
     restart: always
     ports:
       - "8070:8069"
