@@ -48,7 +48,7 @@ RUN mkdir -p /mnt/extra-addons \
 VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 
 # Expose Odoo services
-EXPOSE 8069 8071
+EXPOSE 8069 8075
 
 # Set the default config file
 ENV ODOO_RC /etc/odoo/odoo.conf
